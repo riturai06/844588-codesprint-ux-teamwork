@@ -1,0 +1,16 @@
+.mat-toolbar.mat-dark {
+    background: 	#000000;
+    color: #fff;
+  }
+a{
+  color: #fff;
+}
+.spacer
+{
+    flex:1 1 auto;
+}
+img {
+    border-radius: 50%;
+    width:5%;
+    height:50px;
+  }

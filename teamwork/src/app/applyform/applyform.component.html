@@ -1,0 +1,485 @@
+<form action="/action_page.php" class="was-validated">
+<div class="container">
+  
+  <div class="row"> 
+  <h2>Trainer Appointment</h2>
+  </div>
+  
+      
+      <div class="row">
+      <div class="form-group">
+       <label for="name">Firstname:</label>
+       <input type="name"  class="form-control" id="firstname" [(ngModel)]="aptmodel.firstname" placeholder="First Name" name="FirstName" style="width : 200px" required>
+       <div class="valid-feedback">Valid.</div>
+       <div class="invalid-feedback">Please fill out this field.</div>
+       </div> &nbsp;
+     
+     <div class="form-group">
+     <label for="name">Lastname:</label>
+     <input type="name" class="form-control" id="lastname" [(ngModel)]="aptmodel.lastname" placeholder="Enter Last Name" name="lname" style="width : 200px" required>
+     <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div>
+    </div>
+
+    <div class="row">
+    <!-- <div class="form-group">
+     <label for="age">Age:</label> 
+     <input type="text" class="form-control" id="age" [(ngModel)]="aptmodel.placeholder="Enter Age" name="age" style="width : 150px" required>
+     <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div> &nbsp; -->
+    
+     <div class="form-group">
+     <label for="Email">Email:</label> 
+     <input type="Email" class="form-control" id="email"   [(ngModel)]="aptmodel.email" placeholder="Enter the Email" name="Email" style="width : 250px" required>
+     <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div> &nbsp;
+    
+     <div class="form-group">
+      <label for="phoneno">PhoneNumber:</label> 
+      <input type="PhoneNumber" class="form-control" id="phonenumber" [(ngModel)]="aptmodel.phonenumber" placeholder="Enter the Phone Number" name="PhnNo" style="width : 250px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div>
+    </div>
+    
+    <br/>
+    
+    <div class="row">
+    <h4> Address</h4>
+    </div>
+
+    <div class="row">
+      
+           <div class="form-group">
+            <label for="street">Street Address:</label><br>
+            <input type="text" class="form-control" id="street" [(ngModel)]="aptmodel.street"  placeholder="" name="street" style="width: 600px" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div><br>
+           </div>
+    </div>    
+
+    <div class="row">
+         <div class="form-group">
+            <label for="city">City:</label><br>
+            <input type="text" class="form-control" id="city" [(ngModel)]="aptmodel.city" placeholder="" name="city" style="width: 150px" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+         </div> &nbsp;
+         <div class="form-group">
+            <label for="state">State:</label><br>
+            <input type="text" class="form-control" id="state" [(ngModel)]="aptmodel.state" placeholder="" name="state" style="width: 150px" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+         </div> &nbsp;
+         <div class="form-group">
+            <label for="country">Country:</label><br>
+            <input type="text" class="form-control" id="country" [(ngModel)]="aptmodel.country" placeholder="" name="country" style="width: 150px" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+         </div>
+    </div>
+
+    <div class="row">
+     <div>
+      <label for="zip">Pin:</label><br>
+      <input type="text" class="form-control" id="zip" [(ngModel)]="aptmodel.zip" placeholder="" name="zip" style="width: 150px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div>
+    </div>
+    <br/>
+    
+    <div class="row">
+    <h4>Trainer Preference:</h4>
+    </div>
+
+    <div class="row">
+    <div class="form-check-inline">
+      <div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.trainerpreference" value="Male" name="trainerpreference" checked>Male Trainer</label>
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="form-check-inline">
+     <div class="radio">
+      <label><input type="radio"  [(ngModel)]="aptmodel.trainerpreference" value="Female" name="trainerpreference">Female Trainer</label>
+     </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="form-check-inline"> 
+     <div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.trainerpreference" value="No preference" name="trainerpreference" >No preference</label>
+     </div>
+    </div>
+    </div>
+
+   <div class="row">
+    <div class="form-check-inline">
+    <div class="radio">
+    <label>
+      <input type="radio" [(ngModel)]="aptmodel.trainerpreference" value="Trainer" name="trainerpreference">Trainer&nbsp;
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="text" class="form-control" id="text1"  placeholder="" name="t1" style="width: 200px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </label>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="form-check-inline">
+    <div class="radio">
+    <label>
+      <input type="radio"  [(ngModel)]="aptmodel.trainerpreference" value="trainerpreference" name="trainerpreference">Others&nbsp;
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="text" class="form-control" id="text2"  placeholder="" [(ngModel)]="aptmodel.text2" name="text2" style="width: 200px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </label>
+  </div>
+  </div>
+  </div>
+  <br/>
+
+
+
+  <div class="row">
+  <h4>Do you want Physiotherapist</h4>
+  </div>
+
+    <div class="row"> 
+    <div class="form-check-inline">
+     <div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.physio" value="Yes" name="opt" checked>Yes</label>
+    </div>
+    
+    <div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.physio" value="No" name="opt">No</label>
+    </div>
+    </div>
+    </div>
+
+
+     <br/>
+
+   
+    
+    
+     
+    
+   <div class="row">
+    <table class="table table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>DAY</th>
+                <th>7-9am</th>
+                <th>9-11am</th>
+                <th>11-1pm</th>
+                <th>1-3pm</th>
+                <th>3-5pm</th>
+            </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Monday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot1" name="opt1"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot2" name="opt1"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot3" name="opt1"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot4" name="opt1"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot"  type="radio" value="slot5" name="opt1"></label>
+                    </div>
+                 </td>
+            </tr>
+
+            <tr>
+                 <td>Tuesday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot1" name="opt2"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot"  type="radio" value="slot2" name="opt2"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot"  type="radio" value="slot3" name="opt2"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot4" name="opt2"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot"type="radio" value="slot5" name="opt2"></label>
+                    </div>
+                 </td>
+            </tr>
+
+            <tr>
+                 <td>Wednesday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot1" name="opt3"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot2" name="opt3"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot3" name="opt3"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot4" name="opt3"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot5" name="opt3"></label>
+                    </div>
+                 </td>
+            </tr>
+
+            <tr>
+                 <td>Thrusday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot1" name="opt4"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot2" name="opt4"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot"  type="radio" value="slot3" name="opt4"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot4" name="opt4"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot5" name="opt4"></label>
+                    </div>
+                 </td>
+            </tr>
+
+            <tr>
+                 <td>Friday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot1" name="opt5"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot"  type="radio" value="slot2" name="opt5"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio"  value="slot3" name="opt5"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot"  type="radio" value="slot4" name="opt5"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot5" name="opt5"></label>
+                    </div>
+                 </td>
+            </tr>
+
+            <tr>
+                 <td>Saturday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot"type="radio" value="slot1" name="opt6"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot2" name="opt6"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot3" name="opt6"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot4" name="opt6"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot5" name="opt6"></label>
+                    </div>
+                 </td>
+            </tr>
+
+            <tr>
+                 <td>Sunday</td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot1" name="opt7"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot2" name="opt7"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot3" name="opt7"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input [(ngModel)]="aptmodel.slot" type="radio" value="slot4" name="opt7"></label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radio">
+                      <label><input  [(ngModel)]="aptmodel.slot" type="radio" value="slot5" name="opt7"></label>
+                    </div>
+                 </td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+
+<div class="row">
+<h4>Select a Package</h4>
+</div>
+
+<div class="row">
+<div class="form-check-inline">
+<div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.packageprice" id="one time assessment only" name="packageprice" value="500" onclick="getvalue(this)">Only one assessment (INR 500)</label>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-check-inline">
+<div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.packageprice" id="4 weekly sessions" name="packageprice" value="400" onclick="getvalue(this)">4 weekly Sessions (INR 400/session)</label>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-check-inline">
+<div class="radio">
+      <label><input type="radio" [(ngModel)]="aptmodel.packageprice" id="12 weekly sessions" name="packageprice" value="300" onclick="getvalue(this)">12 weekly Sessions (INR 300/session)</label>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="form-check-inline">
+    <div class="radio">
+      <label>
+        <input type="radio" id="others" [(ngModel)]="aptmodel.packageprice" name="packageprice" value="Quote will be shared on phone call" onclick="getmessage(this)">Others&nbsp;
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="text"  class="form-control" name="packageprice" id="msg" readonly required>
+        <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      </label>
+    </div> 
+  </div>
+</div>
+
+
+
+      
+<br/>
+
+<div class="row">
+<h4>Quote:</h4>
+</div>
+
+<div class="row">
+<div >
+<label> 
+ <input type="text" class="form-control" [(ngModel)]="aptmodel.Quote" id="total" readonly required>
+ <div class="valid-feedback">Valid.</div>
+ <div class="invalid-feedback">Please fill out this field.</div>
+</label>
+</div>
+.
+<div>
+<label>
+  <input type="text" class="form-control" id="val" readonly required>
+  <div class="valid-feedback">Valid.</div>
+  <div class="invalid-feedback">Please fill out this field.</div>
+</label>
+</div>
+</div>
+
+<!-- /form -->
+
+
+<button type="submit" class="btn btn-primary" style="color:white;" (click)="createappoinment()">Submit</button>
+
+     
+
+  
+</div>
+</form>

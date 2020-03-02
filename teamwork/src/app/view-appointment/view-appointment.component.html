@@ -1,0 +1,52 @@
+
+<h4>viewapt table</h4>
+<p>view-appointment works!</p>
+<div class="table-responsive">
+     <table class="table " border="2">
+    <tr>
+        <th>id</th>
+      <th>firstname</th>
+      <th>lastname</th>
+      <th>email</th>
+      <th>phonenumber</th>
+      <th>street</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>country</th>
+      <th>trainerpreference</th>
+      <th>physio</th>
+      <th>slot</th>
+      <th>packageprice</th>
+      <th>Quote</th>
+        
+   
+    </tr>
+
+     <tr *ngFor="let apt of apts">
+        <td>{{apt.id}}</td>
+      <td>{{apt.firstname}}</td>
+      <td>{{apt.lastname}}</td>
+      <td>{{apt.email}}</td>
+      <td>{{apt.phonenumber}}</td>
+      <td>{{apt.street}}</td>
+      <td>{{apt.city}}</td>
+      <td>{{apt.state}}</td>
+      <td>{{apt.zip}}</td>
+      <td>{{apt.country}}</td>
+      <td>{{apt.trainerpreference}}</td>
+      <td>{{apt.physio}}</td>
+      <td>{{apt.slot}}</td>
+      <td>{{apt.packageprice}}</td>
+      <td>{{apt.Quote}}</td>
+      
+        
+        
+
+
+    </tr>
+    
+
+</table>
+<div>
+   
